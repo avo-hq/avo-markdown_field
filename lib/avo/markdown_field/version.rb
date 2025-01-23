@@ -1,5 +1,3 @@
-module Avo
-  module MarkdownField
-    VERSION = "0.0.1" unless const_defined?(:VERSION)
-  end
+module Avo::MarkdownField
+  VERSION = "0.0.2"
 end
