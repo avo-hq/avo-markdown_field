@@ -50,8 +50,10 @@ class Release
 
     def write_version_to_rb
       Pathname.new("./lib/avo/markdown_field/version.rb").write <<~RUBY
-        module Avo::MarkdownField
-          VERSION = "#{version}"
+        module Avo
+          module MarkdownField
+            VERSION = "#{version}" unless const_defined?(:VERSION)
+          end
         end
       RUBY
     end
